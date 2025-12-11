@@ -1,101 +1,125 @@
 HR Workflow Designer – Prototype
 
-A simple and clean HR Workflow Builder prototype built using React + Vite + React Flow.
-This tool allows users to visually create HR workflows by adding nodes, editing their properties, and running a basic simulation of the process.
+A simple and visually clean HR Workflow Builder built using React, Vite, and React Flow.
+Users can create HR process flows using draggable nodes, edit their configuration, and run a basic workflow simulation.
 
-Features
+✨ Features
 
 Add workflow nodes: Start, Task, Approval, Automated Step, End
 
-Drag and position nodes on a visual canvas
+Drag-and-drop visual canvas
 
-Edit node details in the right panel
+Node selection + editable properties in the right panel
 
-Simple workflow validation (Start + End required)
+Simple workflow validation (Start and End required)
 
-One-click Run Simulation to preview workflow steps
+One-click Run Simulation to preview steps
 
-Minimal, clean, professional UI
+Minimal, modern UI suitable for documentation & demos
 
-Project Architecture
+📂 Project Architecture
 src/
-│ App.jsx        → Main application UI (sidebar, canvas, right panel)
-│ index.css      → Global styling and layout
-│ main.jsx       → App entry point
+│ App.jsx        → Main UI (sidebar, canvas, right panel)
+│ index.css      → Application styling
+│ main.jsx       → Application entry point
 
-How it Works
-
-React Flow handles the canvas, nodes, and connections.
-
-React state stores:
-
-Workflow nodes
-
-Selected node
-
-Form data
-
-Simulation results
-
-The simulation is local-only and demonstrates workflow order.
-
-How to Run
+▶️ How to Run the Project
+1. Install dependencies
 npm install
+
+2. Start development server
 npm run dev
 
-
-Open in your browser:
-
+3. Open in browser
 http://localhost:5173/
 
-Example Workflow for Screenshots
+📸 Screenshots 
 
-Employee Onboarding Workflow
+Replace the placeholders below with your actual screenshots.
 
-Start → Onboarding Start
+1. Full Application Layout
 
-Task → Collect Documents
+![WhatsApp Image 2025-12-11 at 00 07 44_4c5e6e7c](https://github.com/user-attachments/assets/8d3079a7-9d0b-4491-b1d7-a7f44d9c8b15)
 
-Approval → Manager Approval
 
-Automated → Send Welcome Email
+2. Example Workflow on Canvas
 
-End → Onboarding Complete
+<img width="303" height="616" alt="image" src="https://github.com/user-attachments/assets/5d6b7cd9-aba0-45a2-a0cf-ac7fe3131d7f" />
 
-After creating the workflow, click Run Simulation to capture the output.
+3. Node Details Panel
+4. 
+<img width="303" height="556" alt="image" src="https://github.com/user-attachments/assets/4b7e3eec-d954-4a3b-b814-fce9e33daa09" />
+
+5. Simulation Output
+
+<img width="465" height="550" alt="image" src="https://github.com/user-attachments/assets/924c9ee1-97b0-44bb-95c2-116837812efe" />
+
+
+📘 Example Workflow for Screenshot
+
+Use this simple workflow to showcase your app:
+
+Start Node – “Onboarding Start”
+
+Task Node – “Collect Documents”
+
+Approval Node – “Manager Approval”
+
+Automated Step Node – “Send Welcome Email”
+
+End Node – “Onboarding Complete”
+
+Recommended canvas layout:
+
+Start → Task → Approval → Automated Step → End
 
 🧠 Design Decisions
+1. Simple Architecture
 
-Kept extremely simple to match prototype requirements
+To keep the prototype lightweight and easy to review, all logic is inside a single App.jsx.
 
-Single-file architecture (App.jsx) to make the project easy to review
+2. React Flow
 
-No backend or database — everything runs in the browser
+Used due to built-in:
 
-Used React Flow for easy drag-and-drop and clean visuals
+Drag + drop
 
-✔ Completed in This Prototype
+Canvas controls
 
-Three-panel layout (Sidebar → Canvas → Config Panel)
+Zooming
 
-Node adding and editing
+Node management
 
-Dynamic fields based on node type
+3. No Backend
+
+Simulation and data stored only in React state.
+
+4. Minimal Validation
+
+Only checks for one Start and one End node.
+
+✔ What Was Completed
+
+Add, drag, and edit workflow nodes
+
+Dynamic form fields based on node type
+
+Clean layout and UI
 
 Basic workflow simulation
 
-Clean UI suitable for screenshots and demonstration
+Example workflow + screenshots section
 
-🔮 What Could Be Added with More Time
+🔮 Future Enhancements
 
-Node-to-node connection validation
+Save/Load workflow
 
-Saving/loading workflows (JSON export/import)
+Advanced validation (connections, unreachable nodes)
 
-Custom-styled node components
+Custom node components
 
-More complex simulation engine
+Undo/redo, minimap
 
-Backend automation triggers
+Backend for real automation
 
-Authentication and role-based access
+Authentication & roles
