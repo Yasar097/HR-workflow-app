@@ -1,16 +1,101 @@
-# React + Vite
+HR Workflow Designer – Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean HR Workflow Builder prototype built using React + Vite + React Flow.
+This tool allows users to visually create HR workflows by adding nodes, editing their properties, and running a basic simulation of the process.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add workflow nodes: Start, Task, Approval, Automated Step, End
 
-## React Compiler
+Drag and position nodes on a visual canvas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Edit node details in the right panel
 
-## Expanding the ESLint configuration
+Simple workflow validation (Start + End required)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+One-click Run Simulation to preview workflow steps
+
+Minimal, clean, professional UI
+
+Project Architecture
+src/
+│ App.jsx        → Main application UI (sidebar, canvas, right panel)
+│ index.css      → Global styling and layout
+│ main.jsx       → App entry point
+
+How it Works
+
+React Flow handles the canvas, nodes, and connections.
+
+React state stores:
+
+Workflow nodes
+
+Selected node
+
+Form data
+
+Simulation results
+
+The simulation is local-only and demonstrates workflow order.
+
+How to Run
+npm install
+npm run dev
+
+
+Open in your browser:
+
+http://localhost:5173/
+
+Example Workflow for Screenshots
+
+Employee Onboarding Workflow
+
+Start → Onboarding Start
+
+Task → Collect Documents
+
+Approval → Manager Approval
+
+Automated → Send Welcome Email
+
+End → Onboarding Complete
+
+After creating the workflow, click Run Simulation to capture the output.
+
+🧠 Design Decisions
+
+Kept extremely simple to match prototype requirements
+
+Single-file architecture (App.jsx) to make the project easy to review
+
+No backend or database — everything runs in the browser
+
+Used React Flow for easy drag-and-drop and clean visuals
+
+✔ Completed in This Prototype
+
+Three-panel layout (Sidebar → Canvas → Config Panel)
+
+Node adding and editing
+
+Dynamic fields based on node type
+
+Basic workflow simulation
+
+Clean UI suitable for screenshots and demonstration
+
+🔮 What Could Be Added with More Time
+
+Node-to-node connection validation
+
+Saving/loading workflows (JSON export/import)
+
+Custom-styled node components
+
+More complex simulation engine
+
+Backend automation triggers
+
+Authentication and role-based access
