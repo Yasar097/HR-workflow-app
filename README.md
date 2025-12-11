@@ -57,21 +57,6 @@ Replace the placeholders below with your actual screenshots.
 
 📘 Example Workflow for Screenshot
 
-Use this simple workflow to showcase your app:
-
-Start Node – “Onboarding Start”
-
-Task Node – “Collect Documents”
-
-Approval Node – “Manager Approval”
-
-Automated Step Node – “Send Welcome Email”
-
-End Node – “Onboarding Complete”
-
-Recommended canvas layout:
-
-Start → Task → Approval → Automated Step → End
 
 🧠 Design Decisions
 1. Simple Architecture
